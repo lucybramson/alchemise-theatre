@@ -417,6 +417,10 @@ a:hover {
   font-weight: 600;
 }
 
+.profile.hide {
+  display: none;
+}
+
 .get-in-touch-container {
   flex-flow: column;
   margin-left: 10vw;
