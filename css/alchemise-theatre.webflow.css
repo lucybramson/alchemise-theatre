@@ -115,7 +115,7 @@ a:hover {
   color: var(--cream);
 }
 
-.nav-link.project {
+.nav-link.cta.lcsh, .nav-link.project {
   padding-bottom: 0;
 }
 
