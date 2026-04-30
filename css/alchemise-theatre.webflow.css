@@ -43,6 +43,36 @@ a:hover {
   color: var(--mustard);
 }
 
+.gallery-thumb {
+
+    width: 200px; /* Or whatever size you want */
+    height: 150px;
+    object-fit: cover; /* This crops the image nicely if they are different sizes */
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.05);
+}
+
+/* 1. Force the image to respect the height of the VenoBox container */
+.vbox-child img {
+    display: block !important;    /* Overrides Webflow's inline-block */
+    max-width: 100% !important;
+    max-height: 100% !important;  /* This stops the vertical scroll */
+    width: auto !important;       /* Maintains aspect ratio */
+    height: auto !important;      /* Maintains aspect ratio */
+}
+
+/* 2. Ensure the container itself doesn't grow taller than the window */
+.vbox-child {
+    max-height: 90vh;             /* 90% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .section {
   background-image: url('../images/sparkle-background-compressed-min.jpg');
   background-position: 0 0;
