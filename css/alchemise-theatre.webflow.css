@@ -482,6 +482,34 @@ a:hover {
   width: 25.3vh;
 }
 
+/*video styling*/
+
+.video-grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.video-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.video-item p {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/*media queries*/
+
 @media screen and (max-width: 991px) {
   .section.project-page {
     height: 450px;
